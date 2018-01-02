@@ -1,4 +1,4 @@
-package org.WW.homework.homework02;
+package org.wojcieszko.homework.homework02;
 
 public class Main {
 

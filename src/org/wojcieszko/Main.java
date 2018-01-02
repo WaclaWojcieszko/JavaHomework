@@ -1,4 +1,4 @@
-package org.WW;
+package org.wojcieszko;
 
 public class Main {
 
