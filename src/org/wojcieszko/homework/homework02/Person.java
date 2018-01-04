@@ -16,7 +16,7 @@ public class Person {
         return pesel;
     }
 
-    private void setPesel(String pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
@@ -24,7 +24,7 @@ public class Person {
         return firstName;
     }
 
-    private void setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -32,7 +32,7 @@ public class Person {
         return surName;
     }
 
-    private void setSurName(String surName) {
+    public void setSurName(String surName) {
         this.surName = surName;
     }
 }
