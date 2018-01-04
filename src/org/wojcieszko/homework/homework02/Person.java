@@ -6,28 +6,33 @@ public class Person {
     private String firstName;
     private String surName;
 
-    public String getPesel(String pesel) {
+    public Person(String pesel, String firstName, String surName) {
+        setPesel(pesel);
+        setFirstName(firstName);
+        setSurName(surName);
+    }
+
+    public String getPesel() {
         return pesel;
     }
 
-    public void setPesel(String pesel) {
+    private void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
-    public String getFirstName(String firstName) {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    private void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    public void setSurName(String surName) {
-        this.surName = surName;
     }
 
     public String getSurName() {
         return surName;
     }
 
+    private void setSurName(String surName) {
+        this.surName = surName;
+    }
 }
