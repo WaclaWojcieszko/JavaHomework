@@ -23,7 +23,7 @@ ___coś___
     * coś jeszcze innego
     
 > Paolo Coelho:
->> "Siała baba mak dopóki ucha nie urwał."
+>> "Pierwsze quoty za płoty."
 
 po pustej linii kończy się cytat
 
@@ -53,3 +53,6 @@ public class Main {
     }
 }
 ```
+
+
+klasa `Main` jest
