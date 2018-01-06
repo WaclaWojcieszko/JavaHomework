@@ -1,12 +1,13 @@
 package org.wojcieszko.homework.homework02;
 
-public class Student extends Person {
+public class Student {
 
     private String institute;
+    private int indeks;
     private int term;
 
-    public Student(String pesel, String firstName, String surName) {
-        super(pesel, firstName, surName);
+    public Student() {
+
     }
 
     public String getInstitute() {
@@ -24,4 +25,13 @@ public class Student extends Person {
     public void setTerm(int term) {
         this.term = term;
     }
+
+    public int getIndeks() {
+        return indeks;
+    }
+
+    public void setIndeks(int indeks) {
+        this.indeks = indeks;
+    }
+
 }
