@@ -8,6 +8,8 @@ public class Main {
 //        kolo.setSurName("Odrzutowiec");
 //        kolo.setPesel("90123098765");
 
+
+
         System.out.println(kolo.getSurName());
 
     }
