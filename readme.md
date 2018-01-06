@@ -45,4 +45,11 @@ ja| java | dzisiaj
 ![obrazek](https://media.mutualart.com/Images/2016_10/27/16/163325498/934da6f5-ef64-4e7c-a06e-69e6c43210d0_570.Jpeg)
 
 
+```java
+public class Main {
 
+    public static void main(String[] args) {
+	// write your code here
+    }
+}
+```
