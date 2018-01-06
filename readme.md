@@ -21,3 +21,15 @@ ___coś___
 - czwarta rzecz
   * coś innego
     * coś jeszcze innego
+    
+> Paolo Coelho:
+>> "Siała baba mak dopóki ucha nie urwał."
+
+po pustej linii kończy się cytat
+
+Ala
+ma
+helikopter  
+
+helikopter  
+w ogniu
