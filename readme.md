@@ -33,3 +33,9 @@ helikopter
 
 helikopter  
 w ogniu
+
+ kto |  co  |  kiedy
+----|----|----
+ja| java| dzisiaj
+|||
+|||
