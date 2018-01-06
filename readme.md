@@ -20,4 +20,4 @@ ___coś___
 * trzecia rzecz
 - czwarta rzecz
   * coś innego
-   *coś jeszcze innego
+    * coś jeszcze innego
