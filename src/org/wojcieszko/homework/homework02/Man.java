@@ -9,4 +9,6 @@ class Man {
         Instructor manInstructor = new Instructor(instructor);
 
     }
+    Man(iPerson);
+
 }
