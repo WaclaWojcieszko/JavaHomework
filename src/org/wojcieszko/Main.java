@@ -1,8 +1,11 @@
 package org.wojcieszko;
 
+import org.wojcieszko.lesson.lesson03.Run;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        //kod
+        Run.Run();
     }
 }
