@@ -1,14 +1,13 @@
 package org.wojcieszko.homework.homework02;
 
-class Man {
-    Man(Person person, Student student, Employee employee, Instructor instructor) {
+abstract class Man {
+    public Man(Person person, Student student, Employee employee, Instructor instructor) {
 
-        Person manPerson = new Person(person);
-        Student manStudent = new Student(student);
-        Employee manEmployee = new Employee(employee);
-        Instructor manInstructor = new Instructor(instructor);
+        Person p = new Person(person);
+        Student s = new Student(student);
+        Employee e = new Employee(employee);
+        Instructor i = new Instructor(instructor);
 
     }
-    Man(iPerson);
 
 }
