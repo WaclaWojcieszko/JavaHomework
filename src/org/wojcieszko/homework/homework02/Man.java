@@ -1,12 +1,17 @@
 package org.wojcieszko.homework.homework02;
 
-abstract class Man {
+abstract class Man implements iPerson, iEmployee, iStudent, iInstructor {
     public Man(Person person, Student student, Employee employee, Instructor instructor) {
 
-        Person p = new Person(person);
-        Student s = new Student(student);
-        Employee e = new Employee(employee);
-        Instructor i = new Instructor(instructor);
+            this.getFirstName() = person.setSurName();
+
+        Person manPerson = new Person(person);
+        manPerson.getSurName();
+
+
+//        Student manStudent = new Student(student);
+//        Employee manEmployee = new Employee(employee);
+//        Instructor manInstructor = new Instructor(instructor);
 
     }
 
