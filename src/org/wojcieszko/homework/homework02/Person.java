@@ -1,6 +1,6 @@
 package org.wojcieszko.homework.homework02;
 
-public class Person implements iPerson {
+public class Person implements IPerson {
 
     private String pesel;
     private String firstName;
@@ -12,6 +12,7 @@ public class Person implements iPerson {
         setSurName(surName);
 
     }
+
 
     public String getPesel() {
         return pesel;

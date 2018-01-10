@@ -1,6 +1,6 @@
 package org.wojcieszko.homework.homework02;
 
-public class Employee implements iEmployee {
+public class Employee implements IEmployee {
 
     private Double salary;
 

@@ -1,6 +1,6 @@
 package org.wojcieszko.homework.homework02;
 
-public class Student implements iStudent {
+public class Student implements IStudent {
 
     private String institute;
     private int indeks;
