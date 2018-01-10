@@ -1,6 +1,6 @@
 package org.wojcieszko.homework.homework02;
 
-public class Instructor implements iInstructor {
+public class Instructor implements IInstructor {
 
     private String title;
 

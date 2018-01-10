@@ -6,13 +6,13 @@ public class Main {
 
         Person personKoloMan = new Person("Roger", "Odrzutowiec", "90123098765");
         Student studentKoloMan = new Student("Prażonej Kukurydzy i Administracji", 102201, 3);
-        Employee employeeKoloMan = new Employee(1200);
+        Employee employeeKoloMan = new Employee(1200.00);
         Man koloMan = new Man(personKoloMan, studentKoloMan, employeeKoloMan, null);
 
 
 
 
-        System.out.println(Man.getSurName(koloMan));
+        System.out.println(koloMan.person.getSurName());
 
     }
 }
