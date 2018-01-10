@@ -3,14 +3,16 @@ package org.wojcieszko.homework.homework02;
 public class Main {
 
     public static void main(String[] args) {
-        Person koloPerson = new iPerson();
-        koloPerson.setFirstName("Roger");
-        koloPerson.setSurName("Odrzutowiec");
-        koloPerson.setPesel("90123098765");
+
+        Person personKoloMan = new Person("Roger", "Odrzutowiec", "90123098765");
+        Student studentKoloMan = new Student("Prażonej Kukurydzy i Administracji", 102201, 3);
+        Employee employeeKoloMan = new Employee(1200);
+        Man koloMan = new Man(personKoloMan, studentKoloMan, employeeKoloMan, null);
 
 
 
-        System.out.println(koloPerson.getSurName());
+
+        System.out.println(Man.getSurName(koloMan));
 
     }
 }
