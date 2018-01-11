@@ -167,15 +167,16 @@ całe systemy zarządzania
 ___composition over inheritance___
 
 ```java
+w main:
+    person = new Person(Ada, ...);
+    student = new Student(Dziennikarstwo,...);
+    employee = null;
+    instructor = null;
+
 class man{
     man(person person, student student...){
 
-    p = new Person(Ada, ...);
-    s = new Student(Dziennikarstwo,...);
-    e = null;
-    i = null;
 
-    man(p, s, null, null);
     )
 }
 ```

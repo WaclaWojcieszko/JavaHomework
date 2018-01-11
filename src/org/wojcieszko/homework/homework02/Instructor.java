@@ -4,7 +4,7 @@ public class Instructor implements IInstructor {
 
     private String title;
 
-    public Instructor() {
+    public Instructor(String title) {
         setTitle(title);
 
     }

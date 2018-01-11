@@ -2,11 +2,11 @@ package org.wojcieszko.homework.homework02;
 
 public class Person implements IPerson {
 
-    private String pesel;
+    private long pesel;
     private String firstName;
     private String surName;
 
-    public Person(String firstName, String surName, String pesel) {
+    public Person(String firstName, String surName, long pesel) {
         setPesel(pesel);
         setFirstName(firstName);
         setSurName(surName);
@@ -14,11 +14,11 @@ public class Person implements IPerson {
     }
 
 
-    public String getPesel() {
+    public long getPesel() {
         return pesel;
     }
 
-    public void setPesel(String pesel) {
+    public void setPesel(long pesel) {
         this.pesel = pesel;
     }
 
