@@ -1,6 +1,6 @@
 package org.wojcieszko.homework.homework02;
 
-class Man {
+class Man implements IPerson {
 
     private Person person;
     private Student student;
@@ -17,4 +17,33 @@ class Man {
 
     }
 
+    @Override
+    public String getFirstName() {
+        return person.getFirstName();
+    }
+
+    @Override
+    public void setFirstName(String firstName) {
+
+    }
+
+    @Override
+    public String getSurName() {
+        return person.getSurName();
+    }
+
+    @Override
+    public void setSurName(String surName) {
+
+    }
+
+    @Override
+    public long getPesel() {
+        return person.getPesel();
+    }
+
+    @Override
+    public void setPesel(long pesel) {
+
+    }
 }
