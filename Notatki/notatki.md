@@ -124,3 +124,65 @@ for( , ){
     System.out.println(i);
 }
 ```
+
+
+# Hierarchia klas
+
+Person
+
+|imie|nazwisko|pesel|
+|---|---|---|
+||||
+
+Student
+
+|rok|numer indeksu|
+|----|---|---|
+|||
+
+Employee
+
+|id|kasa|
+|---|---|
+|||
+
+Instructor
+
+|zajecia|tytul|
+|---|---|
+|||
+
+##SOLID
+
+Single responsibility:
+jedna klasa - jeden powód do zmiany klasy
+Student zmienia nazwisko - zmienia się student, person etc... - źle
+
+klasa może mieć spokojnie 6-8 metod
+10-12 get/set
+
+całe systemy zarządzania
+
+### Kompozycja
+___composition over inheritance___
+
+```java
+w main:
+    person = new Person(Ada, ...);
+    student = new Student(Dziennikarstwo,...);
+    employee = null;
+    instructor = null;
+
+class man{
+    man(person person, student student...){
+
+
+    )
+}
+```
+
+### Interfejsy
+
+*Class Person*
+
+interface person

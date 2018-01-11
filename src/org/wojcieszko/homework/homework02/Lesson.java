@@ -2,7 +2,7 @@ package org.wojcieszko.homework.homework02;
 
 import java.util.Date;
 
-public class Class {
+public class Lesson {
 
     private String topic;
     private Date date;
