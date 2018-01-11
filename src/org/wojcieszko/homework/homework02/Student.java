@@ -3,12 +3,12 @@ package org.wojcieszko.homework.homework02;
 public class Student implements IStudent {
 
     private String institute;
-    private int indeks;
+    private int studentId;
     private int term;
 
-    public Student(String institute, int indeks, int term) {
+    public Student(String institute, int studentId, int term) {
         setInstitute(institute);
-        setIndeks(indeks);
+        setStudentId(studentId);
         setTerm(term);
     }
 
@@ -28,12 +28,12 @@ public class Student implements IStudent {
         this.term = term;
     }
 
-    public int getIndeks() {
-        return indeks;
+    public int getStudentId() {
+        return studentId;
     }
 
-    public void setIndeks(int indeks) {
-        this.indeks = indeks;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
 }

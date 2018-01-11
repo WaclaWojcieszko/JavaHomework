@@ -4,15 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Person personKoloMan = new Person("Roger", "Odrzutowiec", "90123098765");
-        Student studentKoloMan = new Student("Prażonej Kukurydzy i Administracji", 102201, 3);
-        Employee employeeKoloMan = new Employee(1200.00);
-        Man koloMan = new Man(personKoloMan, studentKoloMan, employeeKoloMan, null);
+        Person person = new Person("Roger", "Odrzutowiec", 90123098765L);
+        Student student = new Student("Prażonej Kukurydzy i Administracji", 102201, 3);
+        Employee employee = new Employee(1200.00);
+        Man koloMan = new Man(person, student, employee, null);
 
 
 
 
-        System.out.println(koloMan.person.getSurName());
+        System.out.println();
 
     }
 }
