@@ -245,3 +245,40 @@ Test funkcji wykorzystującej inne funkcje jest testem funkcyjnym,
 żeby nie sprawdzać jeszcze raz sprawdzonych funkcji robi się mocking.
 pomijając sprawdzanie wołanej funkcji
 
+
+## builder
+
+w klasie Fatman:
+
+```java
+public Fatman(){
+}
+
+public static getFatman(){
+    Fatman f = new Fatman();
+    return f;
+}
+```
+
+builder do niego:
+
+```java
+fatMan = getFatman()
+    .getPerson()
+        .setFirstMan()
+        .setPesel()
+    .getStudent()
+        .setFaculty()
+        .setIndeksNumber();
+```
+
+seter w interfesie zwraca `this` (zamiast void)
+
+__wzorzec kreacyjny__
+
+
+
+Kompozyt vs. dziedziczenie
+
+has A - kompozyt
+is A - dziedziczenie
