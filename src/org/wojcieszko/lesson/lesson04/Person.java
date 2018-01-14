@@ -13,28 +13,46 @@ public class Person implements IPerson {
 
     }
 
+    public Person(){
+
+    }
+
+    public static Person getPerson(){
+        Person p = new Person();
+        return p;
+    }
+
+    public Person validate(){
+        if (firstName == null){
+            System.out.println("zle");
+        }
+        return this;
+    }
 
     public long getPesel() {
         return pesel;
     }
 
-    public void setPesel(long pesel) {
+    public Person setPesel(long pesel) {
         this.pesel = pesel;
+        return this;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public Person setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
     public String getSurName() {
         return surName;
     }
 
-    public void setSurName(String surName) {
+    public Person setSurName(String surName) {
         this.surName = surName;
+        return this;
     }
 }

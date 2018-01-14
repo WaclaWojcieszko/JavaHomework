@@ -44,4 +44,14 @@ public class PersonTest {
         person.setFirstName("Paweł");
         assertEquals(person.getFirstName(), "Paweł");
     }
+
+    @Test
+    public void test_builder(){
+        Person person = Person.getPerson()
+                .setFirstName("Jan")
+                .setSurName("Dromader")
+                .setPesel(123)
+                .validate();
+        assertEquals(person.getSurName(), "Dromader");
+    }
 }
