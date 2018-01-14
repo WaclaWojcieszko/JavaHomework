@@ -186,3 +186,62 @@ class man{
 *Class Person*
 
 interface person
+
+
+W kontruktorze nie powinno wystąpić `new` powinien dostać je z zewnątrz.
+
+inversion of controll - samochód nie odpowiada za koła,
+on się z nich składa.
+
+# wzorce projektowe
+
+wymagania
+
+|funkcjonalne | niefunkcjonalne|
+|---|---|
+|narysuj okienko|szybki|
+||stabilny|
+||secure|
+
+niefunkcjonalne:
+-ość
+-ability
+
+
+Zaczynać od niefunkcjonalnych, bo dodanie
+kolejnych wymagań niefunkcjonalnych najczęściej prowadzi
+do pisania programu od nowa.
+
+Po określeniu wymagań niefunkcjonalnych można myśleć o architekturze
+implementacja to wymagania funkcjonalne (okienko kwadratowe czy okragłe)
+
+wzorce projektowe - informatyka jest skodyfikowana, dużo zasad,
+żeby było łatwiej, bo ktoś już to wymyślił.
+
+antywzorce - są powsszechnie używane, ale nie powinny.
+40 wzorców projektowania (gang of four GOF - wzorce architektoniczne
+_design patterns_)
+
+## dobre praktyki
+- funkcja nie powinna mieć więcej niż 3 argumety
+jak robi się więcej to testowalność będzie kiepska
+jeśli jest więcej argumentów trzeba komponować to z mniejszych elementów
+
+- jednocześnie z pisaniem kodu pisać od razu nudne proste testy jednostkowe
+
+## unit testy
+
+pochodzą od jednostki, ale nie wszystkie testy są jednostkowe
+
+testowanie pojedynczych klas czy też metod
+
+jak nie ma w kodzie testów to nie ruszać, bo nie wiadomo co i kiedy się zespusje
+
+__jeden test sprawdza jedną rzecz__
+
+testy robimy dla każdej linii kodu, każdego argumentu, każdej funkcji
+
+Test funkcji wykorzystującej inne funkcje jest testem funkcyjnym,
+żeby nie sprawdzać jeszcze raz sprawdzonych funkcji robi się mocking.
+pomijając sprawdzanie wołanej funkcji
+
