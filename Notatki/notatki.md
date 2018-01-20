@@ -282,3 +282,23 @@ Kompozyt vs. dziedziczenie
 
 has A - kompozyt
 is A - dziedziczenie
+
+
+#Metody
+
+```java
+class Person{
+long Pesel; // dodać private final
+Person();
+getPesel();
+setPesel();
+}
+```
+
+metody:
+- które zmieniają obiekt w sobie (np. set...)
+- które nie zmieniają obiektu (np. get...)
+
+__immutable vs mutable__
+
+robimy nowe obiekty a nie zmieniamy ich

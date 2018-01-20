@@ -19,7 +19,7 @@ public class Model {
             return symbol;
         }
 
-    };
+    }
 
     public XO[][] board = new XO [dimX][dimY];
 
@@ -37,16 +37,28 @@ public class Model {
         }
     }
 
-//    void setBoard(int x, int y, XO board);
-//
-//    public XO[][] getBoard();
-//
-//    public XO won();
-//
-//    public XO whoIsWinner();
-//
-//    void changed();
-//
-//    boolean isPlaying();
+    void setBoard(int x, int y, XO board){
+
+    }
+
+    public XO getBoard() {
+        return board[0][0];
+    }
+
+    public XO won(){
+        return XO.EMPTY;
+    }
+
+    public XO whoIsWinner(){
+        return XO.EMPTY;
+    }
+
+    void changed(){
+
+    }
+
+    public XO isPlaying(){
+        return XO.EMPTY;
+    }
 
 }

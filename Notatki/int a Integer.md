@@ -41,3 +41,25 @@ Long a1;
 Long a2;
 if (a1 != null && a1.equals(a2))
 ```
+
+Poprawniej było by:
+
+`Integer x = new Integer(1500);` niż `Integer x = 1500;` ale domyśla się
+co chciałem zrobić.
+
+## porównanie
+
+deep vs. shallow
+
+jak glęboko porównujemy 2 obiekty.
+
+porównanie zwrotne i symetryczne
+
+czy ja jestem jak Kazik, czy Kazik jest jak ja.
+
+Jak dodajemy equals() dodjamy też hash() bo łatwiej porównać hash niż zawsze liczyć equals
+
+
+_po obiekcie dziedziczy wszystko klasa, enum..._
+
+
