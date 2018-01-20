@@ -55,7 +55,9 @@ public class PersonTest {
         assertEquals(person.getSurName(), "Dromader");
     }
 
-
-
-
+    @Test
+    public void test_person_tostring() {
+        Person person = new Person("Jan", "Dromader",123);
+        System.out.println(person);
+    }
 }

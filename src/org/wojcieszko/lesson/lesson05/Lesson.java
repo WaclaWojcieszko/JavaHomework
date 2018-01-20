@@ -1,6 +1,7 @@
 package org.wojcieszko.lesson.lesson05;
 
 import org.junit.Test;
+import org.wojcieszko.lesson.lesson04.Person;
 
 public class Lesson {
 
@@ -11,5 +12,15 @@ public class Lesson {
         if (x.equals(y)){
             System.out.println("Yes");
         }
+    }
+
+    @Test
+    public void name() {
+        Integer x = new Integer(1500);
+        Integer y = new Integer(1500);
+        if (x.equals(y)){
+            System.out.println();
+        }
+
     }
 }

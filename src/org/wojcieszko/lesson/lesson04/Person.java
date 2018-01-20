@@ -1,5 +1,7 @@
 package org.wojcieszko.lesson.lesson04;
 
+import java.util.Objects;
+
 public class Person implements IPerson {
 
     private long pesel;
@@ -54,5 +56,30 @@ public class Person implements IPerson {
     public Person setSurName(String surName) {
         this.surName = surName;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "pesel=" + pesel +
+                ", firstName='" + firstName + '\'' +
+                ", surName='" + surName + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return pesel == person.pesel &&
+                Objects.equals(firstName, person.firstName) &&
+                Objects.equals(surName, person.surName);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(pesel, firstName, surName);
     }
 }
