@@ -532,3 +532,4 @@ model mówi mediatorowi co się zmieniło, a obserwator pyta mediatora co potrze
 mediator tłumaczy jedno na drugie i często kumuluje informacje.
 
 haczyk - obserwujący o sobie nie wiedzą
+
