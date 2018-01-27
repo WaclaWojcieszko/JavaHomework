@@ -284,7 +284,7 @@ has A - kompozyt
 is A - dziedziczenie
 
 
-#Metody
+# Metody
 
 ```java
 class Person{
@@ -302,3 +302,233 @@ metody:
 __immutable vs mutable__
 
 robimy nowe obiekty a nie zmieniamy ich
+
+# Wyjątki
+
+bardzo wygodne i pożyteczne zajęcie
+
+Rule no 1:
+__nie nadużywać__
+
+jest kosztowna - jest na prawdę kosztowna i pamięć i czas.
+
+- tam gdzie można je sformułować to należy to zrobić
+
+jeśli jest dużo danych to jeśli coś jest źle to wywalić tego złola
+a nie wszystko i resztę przetworzyć
+
+obsługa wyjątków to najczęściej polega na tym, żeby napisać co się zepsuło i co zrobić
+kiedy nie możemy się wydobyć z sytuacji i należy porzucić przetwarzanie
+
+__są wewnątrz toku przetwarzania__
+
+```java
+//Jakaś metoda:
+void ... (){
+    if (pesel == null){
+        throw(  );
+    }
+    this.pesel = pesel;
+
+}
+```
+
+throw przerywa aż do funkcji gdzie jest:
+
+```java
+try{
+
+
+} catch(  ){
+
+}
+```
+
+_rzucamy gorącym kartoflem, kto złapie ten działa_
+
+`throw(except1())`
+
+złapie go najbliższy catch obsługujący taki wyjątek
+
+`catch(except2())`
+
+niezłapany wyjątek wychodzi całkiem z funkcji
+
+```java
+
+f1(){
+    throw(new Exception ("Exc1"));
+}
+
+
+f2(){
+
+    try{
+    f1();
+    } catch (Exc2){
+    } catch (Exc3){
+    } //wyjątek niezłapany
+
+}
+```
+
+```java
+
+f1(){
+    throw(Exc1());
+}
+
+
+f2(){
+
+    try{
+    f1();
+    } catch (Exc2){
+    } catch (Exc1){ //wyjątek złapany
+    }
+
+}
+```
+
+Wyjątek potomny:
+
+```
+Exc11 extends Exc1
+try{
+
+    throw (new Exception("Exc11"))
+
+} catch(Exc1){ //złapie Exc11
+} catch(Exc11){ //tu nie doleci a powinien
+}
+```
+
+```
+Exc11 extends Exc1
+try{
+
+    throw (new Eception("Exc1"));
+
+} catch(Exc11){ //złapie Exc11 ale Exc1 przeleci
+} catch(Exc1){ //tu złapie Exc1
+}
+```
+
+Składnia:
+```
+Exception{
+    Exception(String reason){
+
+    }
+}
+```
+
+Jeżeli funkcja rzuciła wyjątkiem ale nie łapie, to się nie skompiluje jeśli nie jest zadeklarowany
+
+`void f1 throws E1 | E2;`
+
+`void f1 throws Exceptions`
+
+
+Throwable
+- error
+  - runtime error
+- exception
+  - ___throws___
+
+
+`Long x = 7L;` lepszy bierze obiekt z pool
+`Long y = new Long(7L);` tak samo dobry, ale gorszy
+
+`String s1 = "Ala";` + pool
+`String s2 = new String("Ala");`
+
+`int[17]x;`
+
+`new Array <Integer>;`
+
+
+
+
+```
+try{
+} catch (){
+} finally{
+}
+```
+
+Java zbiera finally ale nie musi od razu, startuje z garbage collectorem
+
+ręczne korzystanie z garbage collectora jest źle postrzegane.
+
+Jak program kończy się przed garbage collectorem to nie zaistnieje
+
+## trajkacz z zasobami
+
+try/catch with resources
+
+```java
+File f //open
+
+File implements Closeable;
+    void close(){}
+
+try(f){ //java wie że f jest closeable i zrobi to w dobeym momencie
+
+
+}catch
+
+```
+
+dobra konstrukcja i działa poprawnie w przeciwieństwie do finally
+
+abstract factory - fabryka abstrakcyjna
+simple factory - fabryka prosta
+factory method - metoda wytwórcza
+
+#Fluent API
+
+String.append()
+
+```
+result
+    .append()
+    .append()
+    .toLowerCase()
+    .substring(10,12);
+```
+
+
+
+# Wzorzec projektowy: observer
+
+2 byty - obiekt obserwujący i obserwowany
+
+uruchomienie w modelu setData i wysyła z modelu do widoku wiadomość zmieniło się
+pokazuj, a on mówi ok pokażę
+
+podejścia:
+
+changed -> silny push //statefull
+
+1, 2, TIC -> lekki push (widok ma kopię danych) //statefull odchodzi się od niego
+
+changed -> <- pull //stateless
+
+
+### systemy przetwarzające informacje
+- stanowe (statefull) - musimy przekazywać informacje zawsze do tej samej maszyny
+- bezstanowe (stateless) - klient nie zapisuje stanu w pamięci //mogą być problemy z logowaniem
+
+#### mediator
+
+informuje obserwatorów o zmianie
+
+dodajemy obserwującego z metodą - dodaj mnie jako subskrybenta
+
+MVC - model nie myśli tylko przechowuje dane, jeden obiekt obserwowany
+
+model mówi mediatorowi co się zmieniło, a obserwator pyta mediatora co potrzebuje
+mediator tłumaczy jedno na drugie i często kumuluje informacje.
+
+haczyk - obserwujący o sobie nie wiedzą
