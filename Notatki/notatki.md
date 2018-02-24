@@ -533,3 +533,150 @@ mediator tłumaczy jedno na drugie i często kumuluje informacje.
 
 haczyk - obserwujący o sobie nie wiedzą
 
+
+
+
+# Operacje wejścia wyjścia
+
+njaprostsze podejście do dysku i wczytywania plików daje klasa
+`File("D:\\date.txt")`
+
+w Javie za czytanie odpowiadają strumienie STREAM
+
+Komunikacje plikowe
+
+Object
+- Reader
+    - Filereader - czytanie stringów upierdliwe - czeka na koniec linii żeby go skompletować
+    - Bufferedreader
+
+- Writer
+    - Filewriter - zapisuje od razu na dysku
+    - Bufferedwriter - buforuje i paczkami zapisuje
+
+- Stream
+
+- Channel
+
+- Mem Mapped File - jeden proces czyta drugi pisze
+
+
+#### Procesy i wątki
+
+są jeszcze lżejsze - włókna (fiber) - nie sa współbieżne, wątków nie ma
+
+Nie ma wsparcia wątków na kartach graficznych
+
+Procesy są silnie separowane, źle się komunikują, nie nadpisują swojej pamięci
+ta izolacja jest ważna i potrzebna.
+
+
+
+| Seq | Random access |
+|---|---|
+| | |
+
+Kolekcje
+Struktury dane dla dużych cosiów
+
+Array[5]
+
+||||||
+|---|---|---|---|---|
+
+List
+odniesienia do kolejnych elementów (trzeba przeczytać poprzednie)
+Sequential access (tania przy sekwencyjnym dostępie)
+
+dostęp od razu do piątego elementu - random access
+przy randomowym dostępie Lista jest kosztowna
+
+
+pliki są po to żeby je wczytać
+
+object stream do wczytywania objektów
+    ipmlementuje serializable; - obiekt jest w stanie zamienić się na coś bajt po bajcie,
+    żeby się wczytać bajt po bajcie
+
+    zapisany String jako ciąg bajtów, który można zapisać do pliku
+    String 4 znaki [a][l][a][ ]
+
+
+`Java
+Person {implements serializable;
+        int age;
+        String name;
+        //-> 16 3 Ada
+        }
+`
+
+LSB
+MSB
+Big Endian
+
+
+różne entery:
+
+win: \n \a (0.0D, 0.0A)
+lx: \n
+m+c: \a
+
+porównywanie typów
+
+porównywanie Stringów przez == jest nielegalne - robi się to przez .equals()
+
+znak unicode 2 bajtowy - niekoniecznie dobrze przenoszą języki
+
+String jest immutable
+- można zrobić nowy, zmienić
+- nie można wyciąć z niego
+"" - jest literałem String
+"". - zawiera metody
+
+String jest final - nie można go rozszerzyć, nie będzie potomków
+
+.compareTo() - miewa problemy z porównywaniem różnymi językami
+
+kłopot ze stringiem - biblioteka ICU (dla C) i ICU4J (dla Java)
+
+.endsWith() - czy kończy się na
+
+.contains() - zawiera
+
+.equals() - dziedziczy po obiekcie więc trzeba być czujnym
+
+.hashCode() - zwraca skróty
+
+.indexOf() - w którym miejscu stringu, ma wersję zaczynającą od tego gdzie skończyła
+
+.isEmpty() - lepszy niż > 0
+
+.lastIndexOf() -
+
+.matches()
+
+.split() - dzieli po czymś i zwraca tabelę
+
+
+### kolekcja
+
+kolekcja zbiór odniesień do bytów, są przetwarzane jako jednowątkowe
+
+List - uporządkowany - implementacje:
+- ArrayList - można zrobić .resize()
+- LinkedList
+- Vector - nie używać!!!
+
+Set - zbiór (matematycznie rozumiany) nieuporządkowany
+
+
+Queue - kolejka
+- LIFO - stos (stosy często implementowane jako Array)
+- FIFO
+
+Map - bardziej jak baza danych (identyfikator "Ada", wartość 19) - tablica hashująca / indeksująca
+
+biblioteki
+GUAVA - google'a
+APACHE COLLECTIONS
+
