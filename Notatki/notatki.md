@@ -668,15 +668,100 @@ List - uporządkowany - implementacje:
 - Vector - nie używać!!!
 
 Set - zbiór (matematycznie rozumiany) nieuporządkowany
-
+tych samych elementów jest 1 sztuka (można multisety)
 
 Queue - kolejka
 - LIFO - stos (stosy często implementowane jako Array)
 - FIFO
 
 Map - bardziej jak baza danych (identyfikator "Ada", wartość 19) - tablica hashująca / indeksująca
+są unikalne
+
+Map <indeks, wartość> - musi być sprawna funkcja hashująca
+
+Mapa ["Ala"] = 7;
+Mapa ["Ala"] ++;
+Map <String, Person>
+Map <Person, Person>
+Map <Person, List<Person>>
+
+
+List <Integer> data = new ArrayList<>();
+
+Class..
+    void Abc(){
+
+    }
+
+    Integer q1;
+    Integer q2 = 100;
+
+
+W każdej klasie można dodać initialization block:
+
+```Java
+{
+ //kod
+}
+```
+
+blok inicjalizujący należy do obietu
+static - przynależy do klasy, wszystkie inne do obiektu
+
+|dostęp|
+|---|
+|public|
+|protected|
+private|
+|niezdefiniowany|
+
+Mechanizm refleksji
+klasa może dowiedzieć się jak zbudowane są inne klasy, a nawet zmienić
+
+
 
 biblioteki
 GUAVA - google'a
 APACHE COLLECTIONS
+
+# Programowanie aspektowej
+
+### AspectJ
+
+spogląda na system z różnych stron (a teraz bezpieczeństwo każdej klasy)
+refleksja sprawdza co się dzieje w runtime
+dodajemy do systemu nieprzewidziane elementy
+
+### Loggery
+
+Nie są prostackie - takie widoczki.
+
+Napisane jeszcze lepiej - nie psują się, są stabilne, nawet się nie testuje
+
+
+
+### FSM Finite State Machine (maszyna stanów skończonych)
+
+wywodzi się z mechaniki Automat Moore'a
+
+
+Maszyna stanowa - są stany i opisane przejścia między nimi i co się musi wydarzyć
+
+Język domenowy - czasem trzeba poznać (np. @Before i @After w @Test -ach)
+
+Enum STATES
+[from][to] msg action
+
+[on][off] guzik off
+
+każda krawędź opisana
+
+|state|msg|state|action|
+|---|---|---|---|
+|Init|Button ON|ON|Zapalić kineskop|
+
+Jak jest za dużo if else w kodzie i zbyt dużo decyzji - prawdopodobnie da się to zmieścić
+w jednym miejscu w kodzie (jeżeli przycisk jest włączony i cośtam to przełącz to i tamto, a jeśli...)
+
+Niedoceniana, a kozacka konstrukcja do podejmowania decyzji
 

@@ -17,5 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="EasyFSM-0.0.006" level="project" />
   </component>
 </module>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FSM>
+	<STATE id="START" type="ID">
+		<MESSAGE id="FIGHT" action="fight" nextState="P1TURN"/>
+	</STATE>
+
+	<STATE id="P1TURN">
+		<MESSAGE id="MOVE" action="move" nextState="P2TURN"/>
+		<MESSAGE id="STOP" action="stop" nextState="STOP"/>
+	</STATE>
+
+	<STATE id="P2TURN">
+		<MESSAGE id="MOVE" action="move" nextState="P1TURN"/>
+		<MESSAGE id="STOP" action="stop" nextState="STOP"/>
+	</STATE>
+
+	<STATE id="STOP">
+		<MESSAGE id="RESET" action="reset" nextState="START"/>
+	</STATE>
+
+
+</FSM>

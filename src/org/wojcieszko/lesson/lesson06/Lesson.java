@@ -86,5 +86,6 @@ public class Lesson {
         Set<Integer> set2 = new TreeSet<>(); //kolejność w zbiorze jest zachowana
 
     }
+
 }
 
