@@ -765,3 +765,28 @@ w jednym miejscu w kodzie (jeżeli przycisk jest włączony i cośtam to przeł�
 
 Niedoceniana, a kozacka konstrukcja do podejmowania decyzji
 
+
+# Maven
+
+system budowania projektów w java
+
+do tej pory był Ant
+
+Gradle się przebija
+
+- pokazują co się zmieniło, dopisują co potrzeba
+- zajmują się dogrywaniem/importowaniem bibliotek
+- żeby byblioteki były dostępne, fundacje które są odpowiedzialne za te systemy
+zbierają wszystkie biblioteki javy
+
+
+## wzorzec projektowy Catch 'em all!
+
+sprawdzenie null -> notNull
+od java8 jak konwencja, że jak trafia się null to wywal się od razu, bo znaczy że coś było zwalone
+
+MODYFIKACJE KOLEKCJI NA KTÓREJ SIĘ ITERUJE SĄ ZABRONIONE
+
+### Iteratory po kolekcjach
+
+
