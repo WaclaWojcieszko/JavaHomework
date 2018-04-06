@@ -1,8 +1,5 @@
 package org.wojcieszko.homework.homework08;
 
-
-import com.sun.javafx.UnmodifiableArrayList;
-
 public class SecondValue {
     public static void main(String[] args) {
 
@@ -12,12 +9,12 @@ public class SecondValue {
         int[] value = new int[2];
 
 
-            for (int t :table2) {
-                if (t >= value[1]){
-                    value[0] = value[1];
-                    value[1] = t;
-                }
+        for (int t : table2) {
+            if (t >= value[1]) {
+                value[0] = value[1];
+                value[1] = t;
             }
+        }
 
 
         System.out.println(value[0]);
