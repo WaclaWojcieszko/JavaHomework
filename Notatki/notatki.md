@@ -838,3 +838,23 @@ L2 - w zależności od ważności może powinno być pobrane stamtąd
 
 ## Singleton
 
+# złożoność obliczeniowa
+
+algorytm O o złożoności n elementów: O(n) - doskonała
+przy wektorze nty elemment znajdzie we wskazanym miejscu (arrayList) O(1) - luxus
+wyższa złożoność O(n*log n) - dobre!
+O(n^2) - zamknąć oczy i mieć nadzieję, że nikt nie zauważy - np pętla w pętli
+O(n!) - NP-zupełny
+
+### rekurencja i algorytmy z nawrotami
+
+'void f(String... s)' -> String[]s
+
+w rekurencji musi być test stopu, żeby się skończyło
+
+wołamy samych siebie wielokrotnie
+
+prawdopodobnie każdą pętlę da się napisać rekurencyjnie
+
+rekurencja ma pozwolić myśleć o problemie jak o uproszczonym przypadku
+

@@ -18,6 +18,7 @@ public class SecondValue {
 
         int[] value = new int[2];
 
+
         for (int t : table) {
             if (t >= value[1]) {
                 value[0] = value[1];
@@ -28,5 +29,5 @@ public class SecondValue {
         }
         return value[0];
     }
-
+    //pobawić się z więcej elementowymi tablicami
 }
