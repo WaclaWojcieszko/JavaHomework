@@ -104,10 +104,11 @@ public class Main {
             }
             if (!board.ifFreeSpace() == true) {
                 fsm.ProcessFSM("STOP");
+                break;
             }
-
 
         }
 
     }
+
 }
