@@ -39,6 +39,7 @@ public class ExactSum {
 
             if (sum(constItems) == 6) {
                 System.out.println(constItems.toString());
+                return;
             }
 
             constItems.add(items.get(index));

@@ -838,6 +838,11 @@ L2 - w zależności od ważności może powinno być pobrane stamtąd
 
 ## Singleton
 
+jest jeden raz stworzony
+
+
+
+
 # złożoność obliczeniowa
 
 algorytm O o złożoności n elementów: O(n) - doskonała
@@ -858,3 +863,19 @@ prawdopodobnie każdą pętlę da się napisać rekurencyjnie
 
 rekurencja ma pozwolić myśleć o problemie jak o uproszczonym przypadku
 
+
+
+# Prawo 10^7 operacji - liczba op. program powinien się wykonywać
+
+O(n) - 10^7
+O(n^2) - 10^3,5
+O(nlgN) - 10^6
+O(n!) - 11
+
+
+DFS - Depth First Search
+
+
+Biblioteki:
+JAXB - kobyła, bez sensu
+Apache Commons Configuration
