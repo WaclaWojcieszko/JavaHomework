@@ -2,6 +2,10 @@ package org.wojcieszko.ticTacToe;
 
 import Action.FSMAction;
 import FSM.FSM;
+import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.builder.fluent.Configurations;
+import org.apache.commons.configuration2.ex.ConfigurationException;
+import org.wojcieszko.ticTacToe.controllers.ControllerAI1;
 import org.wojcieszko.ticTacToe.controllers.ControllerMan;
 import org.wojcieszko.ticTacToe.controllers.IStrategy;
 import org.wojcieszko.ticTacToe.model.Board;
@@ -10,17 +14,20 @@ import org.wojcieszko.ticTacToe.views.ShowBoard;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
 
-    public static void main01(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("enter an integer");
-        String myInput = keyboard.nextLine();
-        System.out.println(myInput);
+    static IStrategy playerFactory(String who) {
+        if (who.equals("man")) {
+            return new ControllerMan();
+        } else if (who.equals("ai")) {
+            return new ControllerAI1();
+        }
+        return null;
     }
 
     public FSM getFSM() throws IOException, SAXException, ParserConfigurationException {
@@ -51,14 +58,18 @@ public class Main {
 
     }
 
-    public static void main (String[] args) throws ParserConfigurationException, SAXException, IOException {
+    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, ConfigurationException {
 
         Board board = new Board();
         ShowBoard showBoard = new ShowBoard();
         board.addObserver(showBoard);
 
-        IStrategy player1 = new ControllerMan();
-        IStrategy player2 = new ControllerMan();
+        Configurations configs = new Configurations();
+        Configuration config = configs.properties(new File("D:\\Sobotniekodzenie\\IdeaProjects\\JavaHomework\\src\\resource\\player.properties"));
+
+
+        IStrategy player1 = playerFactory(config.getString("player1"));
+        IStrategy player2 = playerFactory(config.getString("player2"));
 
 
         Main tralala = new Main();
@@ -68,16 +79,17 @@ public class Main {
 
         System.out.println(fsm.getCurrentState());
 
-        for (int x = 0; x < board.getData().length; ++x){
-            for (int y = 0; y < board.getData().length; ++y){
-                board.setData(x, y, TicTac.TIC);
-            }
-        }
+//        for (int x = 0; x < board.getData().length; ++x) {
+//            for (int y = 0; y < board.getData().length; ++y) {
+//                board.setData(x, y, TicTac.TIC);
+//            }
+//        }
+//
+//        board.setData(0, 0, TicTac.EMPTY);
+//        board.setData(1,1,TicTac.EMPTY);
 
-        board.setData(0, 0, TicTac.EMPTY);
-
-        while (true){
-            switch (fsm.getCurrentState()){
+        while (true) {
+            switch (fsm.getCurrentState()) {
                 case "P1TURN": {
                     player1.makeMove(board, TicTac.TIC);
                     fsm.ProcessFSM("MOVE");
@@ -90,20 +102,12 @@ public class Main {
                 }
 
             }
-            if (!board.ifFreeSpace() == true){
+            if (!board.ifFreeSpace() == true) {
                 fsm.ProcessFSM("STOP");
             }
 
 
         }
-
-//        f.ProcessFSM("FIGHT");
-//        System.out.println(f.getCurrentState());
-//        f.ProcessFSM("MOVE");
-//        System.out.println(f.getCurrentState());
-//        f.ProcessFSM("STOP");
-//
-//        System.out.println(f.getCurrentState());
 
     }
 }

@@ -11,7 +11,7 @@ public class ControllerMan implements IStrategy {
     @Override
     public boolean makeMove(Board board, TicTac playerSymbol) {
 
-        System.out.println("Grasz jako: " + playerSymbol);
+        System.out.println("Grasz jako: " + playerSymbol.getMark());
 
 
         while (true) {
