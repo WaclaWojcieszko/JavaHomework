@@ -765,3 +765,96 @@ w jednym miejscu w kodzie (jeżeli przycisk jest włączony i cośtam to przeł�
 
 Niedoceniana, a kozacka konstrukcja do podejmowania decyzji
 
+
+# Maven
+
+system budowania projektów w java
+
+do tej pory był Ant
+
+Gradle się przebija
+
+- pokazują co się zmieniło, dopisują co potrzeba
+- zajmują się dogrywaniem/importowaniem bibliotek
+- żeby byblioteki były dostępne, fundacje które są odpowiedzialne za te systemy
+zbierają wszystkie biblioteki javy
+
+
+## wzorzec projektowy Catch 'em all!
+
+sprawdzenie null -> notNull
+od java8 jak konwencja, że jak trafia się null to wywal się od razu, bo znaczy że coś było zwalone
+
+MODYFIKACJE KOLEKCJI NA KTÓREJ SIĘ ITERUJE SĄ ZABRONIONE
+
+### Iteratory po kolekcjach
+
+
+# JPA
+
+komunikacja za bazą danych:
+2frameworki:
+Hibernate
+Mybatis
+
+
+frejmłorki komunikują się dalej przez sterowniki z bazą danych.
+
+JDBC:MySQL:// - url jest sterownikiem rl- resource locator
+localhost:3089/homework
+(np. http:// jest sterownikiem)
+
+JPQL - nieznacznie różni się od SQL - można dopisać :argument - parametryzacja
+    wywodzi się od HQL
+    
+
+DTO - wzorzecantywzorzec Data Transfer Object
+Data Object:
+objekt który służy tylko do przesyłania danych - nie operuje się na nim w aplikacji
+
+Business Object:
+class Simple {int ID, String name, int number}
+będzie miała metody 
+
+
+całość to ORM - Object Relational Mapping
+
+DTO - tak szczupłe jak tabela w DB - nie trzymać DTO zbyt długo - zwalniać pamięć i aktualizować
+
+### pula połączeń
+
+POOL - wiele owartych połączeń między app a systemem DB
+
+w dużych systemach gdzie koszt pobrania jest kosztowniejszy niż ich użycie i jest istotny, albo nieprzewidywalny
+
+allokacja pamięci w systemie - zasoby trzeba zwalniać i to jak najprędzej
+
+W Hybernate - cachowanie na 2 poziomach - zwiększa wydajność kosztem spójności danych
+zapamiętanie danych pod ręką - nie ma co wierzyć, że to jest aktualne - nie ma cacha - zawsze pytamy bazy danych
+
+L1 każdy user pobiera
+L2 - w zależności od ważności może powinno być pobrane stamtąd
+
+
+## Singleton
+
+# złożoność obliczeniowa
+
+algorytm O o złożoności n elementów: O(n) - doskonała
+przy wektorze nty elemment znajdzie we wskazanym miejscu (arrayList) O(1) - luxus
+wyższa złożoność O(n*log n) - dobre!
+O(n^2) - zamknąć oczy i mieć nadzieję, że nikt nie zauważy - np pętla w pętli
+O(n!) - NP-zupełny
+
+### rekurencja i algorytmy z nawrotami
+
+'void f(String... s)' -> String[]s
+
+w rekurencji musi być test stopu, żeby się skończyło
+
+wołamy samych siebie wielokrotnie
+
+prawdopodobnie każdą pętlę da się napisać rekurencyjnie
+
+rekurencja ma pozwolić myśleć o problemie jak o uproszczonym przypadku
+
