@@ -1,11 +1,11 @@
 package org.wojcieszko.homework.homework02;
 
-public class Employee extends Person {
+public class Employee implements IEmployee {
 
     private Double salary;
 
-    public Employee(String pesel, String firstName, String surName) {
-        super(pesel, firstName, surName);
+    public Employee(Double salary) {
+        setSalary(salary);
     }
 
     public Double getSalary() {

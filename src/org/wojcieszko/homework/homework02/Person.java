@@ -1,22 +1,24 @@
 package org.wojcieszko.homework.homework02;
 
-public class Person {
+public class Person implements IPerson {
 
-    private String pesel;
+    private long pesel;
     private String firstName;
     private String surName;
 
-    public Person(String pesel, String firstName, String surName) {
+    public Person(String firstName, String surName, long pesel) {
         setPesel(pesel);
         setFirstName(firstName);
         setSurName(surName);
+
     }
 
-    public String getPesel() {
+
+    public long getPesel() {
         return pesel;
     }
 
-    public void setPesel(String pesel) {
+    public void setPesel(long pesel) {
         this.pesel = pesel;
     }
 
