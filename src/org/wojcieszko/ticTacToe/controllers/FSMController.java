@@ -26,6 +26,7 @@ public class FSMController {
                     return true;
                 }
             });
+
             f.setAction("START", "MOVELEFT", new FSMAction() {
                 @Override
                 public boolean action(String curState, String message, String nextState, Object args) {
@@ -33,6 +34,9 @@ public class FSMController {
                     return true;
                 }
             });
+
+
+
             System.out.println(f.getCurrentState());
             f.ProcessFSM("FIGHT");
             System.out.println(f.getCurrentState());
